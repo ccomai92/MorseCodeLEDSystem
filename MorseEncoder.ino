@@ -1,4 +1,3 @@
-#include <Keyboard.h>
 #include "MorseEncoder.h"
 
 const int LED_PIN = 13;     
@@ -13,7 +12,6 @@ void setup()
     // put your setup code here, to run once:
     pinMode(LED_PIN, OUTPUT);           // sets the digital pin as output
     Serial.begin(9600);                 // open the serial port
-    Keyboard.begin();                   // initialize control over the keyboard
     morseEncoder.initialize(LED_PIN);   // initialize morse encoder
     exitCalled = false;                 // initialize exit flag
 }
